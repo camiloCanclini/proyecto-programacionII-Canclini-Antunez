@@ -1,0 +1,100 @@
+body{
+    background: radial-gradient(100% 225% at 100% 0%, #d19018 0%, #6b4242 100%), linear-gradient(236deg, #7e4f07 0%, #000000 100%), linear-gradient(135deg, #c48e23 0%, #fff0cd 36%, #e7a248 36%, #5d3d0a 60%, #a04c14 60%, #d26d2a 67%, #3c140a 67%, #dc3e17 100%);
+    background-blend-mode: overlay, hard-light, normal;
+    background-repeat: repeat;
+    background-size: cover;
+    background-attachment: fixed;
+    padding: 0;
+    margin: 0;
+}
+header{
+    display: flex;
+    align-items: center;
+    height: 10vh;
+    background-color: #111;
+    padding: 10px;
+    margin: 0;
+    box-shadow: 0px 0px 20px 5px #000;
+}
+#logoPage{
+    height: 100%;
+    box-shadow: -2px 2px 0px 3px #000000;
+}
+#form-search-movie{
+    display: flex;
+    align-items: center;
+    flex-grow: 1; 
+    height: 50%;
+    margin: 0px 10px;
+}
+#form-search-movie form{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    
+}
+#form-search-movie form input[type="search"]{
+    flex-grow: 1;
+    border-style: none;
+    height: 100%;
+    border-radius: 20px 0px 0px 20px;
+}
+#form-search-movie form input[type="submit"]{
+    height: 100%;
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 0px 20px;
+    box-sizing: border-box;
+    font-size: 25px;
+    border-style: none;
+    border-radius: 0px 20px 20px 0px;
+    background-color:#f5ba46;
+}
+#account-header{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 25px;
+    color: #fff;
+}
+#account-header a{
+    clip-path: circle(40% at 50% 50%); /* refer remarks before usage */
+    text-align: center;
+    background-color: rgb(245, 197, 108);
+    padding: 10px;
+    margin: 0px 10px;
+}
+#account-header a i{
+    font-size: 40px;
+    color: #000;
+}
+main{
+    margin: 10px;
+}
+#cartelera{
+    padding: 10px;
+    background-color: rgb(23, 23, 23);
+    box-shadow: 0px 3px 10px 2px rgba(0, 0, 0, 0.8);
+    color: #fff;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+#cartelera h1{
+    font-size: 30px;
+    margin: 5px 10px;
+}
+#cartelera p{
+    margin: 5px 10px;
+}
+#cartelera_peliculas{
+    display: flex;
+    justify-content: space-evenly;
+}
+.peliculas-cartelera{
+    font-size: 10px;
+}
+aside{
+    height: 200px;
+    
+}
