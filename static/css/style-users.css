@@ -8,13 +8,24 @@
     font-family: Helvetica, sans-serif;
 }
 
+body {
+    background-color: rgb(31, 31, 31);
+}
+
 a {
     color: aliceblue;
 }
 
-h1 {
+h1, h3 {
     color: #fff;
     margin-top: 20px;
+}
+
+main {
+    width: 100%;
+    height: 100%;
+    display: flex;
+
 }
 
 /*BARRA DE NAVEGACION*/
@@ -45,45 +56,77 @@ h1 {
 .navbar-p3 {
     display: flex;
     justify-content: flex-end;
+    align-items: center;
+}
+
+.navbar-p3 i {
+    font-size: 20px;
+    color: #fff;
 }
 
 #user {
     color: #fff;
 }
 
+/*BARRA DE FILTRADO*/
+
+#filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: auto;
+    background-color: rgb(20, 20, 20);
+}
+
+
+.filter-container {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(20, 20, 20);
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    padding: 20px;
+}
+
+
 /*ABM PELICULAS*/
 
-.add-contain {
-    width: 100%;
-    height: 300px;
+#ABM {
     display: flex;
-    gap: 20px;
-    flex-direction: column;
     align-items: center;
-    background-color: rgb(31, 31, 31);
-}
-
-#add {
-    width: 50%;
-    height: 90%;
-    margin: auto;
-    background-color: darkred;
-
-}
-
-#delete {
+    gap: 20px;
     position: absolute;
-    left: 95%;
-    top: 4%;
-    font-size: 20px;
-    color: rgb(58, 58, 58);
+    left: 90%;
+    top: 10px;
+    font-size: 15px;
+}
+
+#edit, #delete {
+    color: rgb(75, 75, 75);
+}
+
+#edit:hover {
+    color: rgb(66, 170, 255);
 }
 
 #delete:hover {
-    color: rgb(20, 162, 218);
+    color: rgb(255, 0, 0);
 }
 
+
 /*SECCION DE PELICULAS*/
+
+#peliculas-actuales {
+    display: flex;
+    width: 80%;
+}
 
 #estrenos-container {
     width: 100%;
@@ -103,17 +146,24 @@ h1 {
     justify-content: center;
     width: 90%;
     height: auto;
-    margin: 0px auto 20px auto;
-    background-color: rgb(14, 14, 14);
+    margin: 0px auto 0px auto;
+    background-color: rgb(20, 20, 20);
     padding: 20px;
 }
 
 .cajas {
-    width: 800px;
-    height: 500px;
+    width: 600px;
+    height: 550px;
     border-radius: 20px;
     display: flex;
+    flex-direction: column;
     position: relative;
+    background-color: rgb(31, 31, 31);
+}
+
+.caja-principal {
+    display: flex;
+    height: 60%;
 }
 
 
@@ -127,29 +177,29 @@ h1 {
     width: 100%;
     height: 100%;
     object-fit: cover;
-    border-radius: 20px 20px 0px 0px;
+    border-radius: 20px 0px 0px 0px;
 }
 
 .cajas-p2 {
     display: flex;
     flex-direction: column;
-    gap: 30px;
-    width: 50%;
+    width: 55%;
     height: 100%;
-    background-color: rgb(31, 31, 31);
+    margin-top:20px ;
     color: #fff;
-    border-radius: 0px 20px 20px 0px;
+    border-radius: 0px 20px 0px 0px;
 }
 
 .movie-title {
-    margin-top: 20px;
+    margin-top: 30px;
 }
 
 .movie-info {
     display: flex;
     text-align: justify;
     gap: 20px;
-    width: 90%;
+    width: 95%;
+    padding: 10px;
     margin: 0px auto 0px auto;
     height: 250px;
     flex-direction: column;
@@ -157,14 +207,15 @@ h1 {
     font-size: 11pt;
 }
 
-#coments {
-    width: 90%;
+#comments {
+    width: 100%;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    height: 190px;
-    margin: 0px auto 0px auto;
-    background-color: rgb(31, 31, 31);
+    height: 40%;
+    margin: 0px auto 50px auto;
+    background-color: rgb(29, 29, 29);
+    border-radius: 0px 0px 20px 20px ;
 }
 
 .comments-container {
@@ -172,8 +223,9 @@ h1 {
     height: 100%;
     display: flex;
     flex-direction: column;
-    margin-bottom: 10px;
-    overflow:auto;
+    align-items: center;
+    margin-bottom: 20px;
+    overflow: auto;
 }
 
 .comment {
@@ -183,9 +235,10 @@ h1 {
     display: flex;
     align-items: flex-start;
     gap: 20px;
-    margin-bottom: 20px;
+    margin: 10px 0px 20px 0px;
     padding: 10px;
     flex-direction: column;
+    color: #fff;
     background-color: rgb(15, 15, 15);
     font-size: 10pt;
 }

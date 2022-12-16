@@ -14,6 +14,14 @@ a {
 
 h1 {
     color: #fff;
+    margin-top: 20px;
+}
+
+main {
+    width: 100%;
+    display: flex;
+    background-color: blue;
+
 }
 
 /*BARRA DE NAVEGACION*/
@@ -46,7 +54,36 @@ h1 {
     justify-content: flex-end;
 }
 
+
+/*BARRA DE FILTRADO*/
+
+#filter {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 20%;
+    height: auto;
+    background-color: rgb(22, 22, 22);
+}
+
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    width: 80%;
+    height: 80%;
+    background-color: rgb(17, 17, 17);
+    border-radius: 20px;
+}
+
+
+
 /*SECCION DE PELICULAS*/
+
+#peliculas-actuales {
+    display: flex;
+    width: 80%;
+}
 
 #estrenos-container {
     width: 100%;
