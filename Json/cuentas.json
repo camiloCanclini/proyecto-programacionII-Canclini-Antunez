@@ -1,1 +1,27 @@
-{"0": {"email": "admin", "password": "admin"}, "13886": {"email": "camilo canclini", "password": 123}, "8312": {"name": "camilo canclini", "email": "camilo123@gmail.com", "password": "hola123456"}, "1491": {"name": "Alvaro Riquelme", "email": "riquelme@gmail.com", "password": "banana12345", "dni": "1231241234"}, "8994": {"name": "a", "email": "camilo@gmail.com", "password": "1qazxsw2", "dni": "123456787"}, "7424": {"name": "Agustin", "email": "ant@gmail.com", "password": "12345678", "dni": "41198539"}, "4411": {"name": "agustin antunez", "email": "ant@gmail.com", "password": "12345678", "dni": "41198539"}, "3221": {"name": "agustin antunez", "email": "ant@gmail.com", "password": "12345678", "dni": "41198539"}, "6363": {"name": "agustin", "email": "ant@gmail.com", "password": "12345678", "dni": "41198539"}}
+{
+    "users": [
+      {
+        "username": "admin",
+        "password": "admin"
+      },
+      {
+        "username": "CamiloCanclini",
+        "password": "canclini123"
+      },
+      {
+        "username": "antunez_agustin",
+        "password": "antunez123"
+      },
+      {
+        "username": "Mark_Zuckerberg",
+        "password": "facebook123"
+      },
+      {
+        "username": "lio_messi",
+        "password": "quemirabobo10"
+      }
+    ]
+}
+
+
+

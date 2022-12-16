@@ -23,11 +23,11 @@
             <section id="login">
                 <div class="login-contain">
                     <h1 class="login-title">Cinematronic</h1>
-                    <form action="GET">
+                    <form method="get" action="{{ url_for('user') }}">
                         <label for="user">Usuario</label><br>
-                        <input type="text" id="user" placeholder="Charles_Chaplin"><br>
+                        <input type="text" id="user" name="username" placeholder="Charles_Chaplin"><br>
                         <label for="password">Contraseña</label><br>
-                        <input type="password" id="password" placeholder="WarWorlds123"><br><br>
+                        <input type="password" id="password" name="pass"  placeholder="WarWorlds123"><br><br>
                         <input id="submit" type="submit" value="Ingresar">
                     </form>
                 </div>
