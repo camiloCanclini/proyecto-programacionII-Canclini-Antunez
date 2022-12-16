@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <title>Pagina</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul class="navbar-p1">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="#">Cartelera</a></li>
+                </ul>
+                <div class="navbar-p2">
+                    <input id="search" type="search">
+                    <input id="submit" type="submit" value="Buscar">
+                </div>
+                <ul class="navbar-p3">
+                    <li><a href="/login">Ingresar</a></li>
+                    <li><a href="#">Registrarse</a></li>
+                </ul>
+            </nav>
+        </header>
+        
+        <main>
+            <section id="peliculas-actuales">
+                <div id="estrenos-container">
+                    <h1>Ultimas peliculas cargadas</h1>
+                    <div class="container__cajas">
+                        <div class="cajas">
+                            <div class="cajas-p1">
+                                <img src="{{ url_for('static', filename='images/spiderman.jpg') }}" alt="pelicula">
+                            </div>
+                            <div class="cajas-p2">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                            </div>
+                        </div>
+
+                        <div class="cajas">
+                            <div class="cajas-p1">
+                                <img src="{{ url_for('static', filename='images/spiderman.jpg') }}" alt="pelicula">
+                            </div>
+                            <div class="cajas-p2">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                            </div>
+                        </div>
+
+                        <div class="cajas">
+                            <div class="cajas-p1">
+                                <img src="{{ url_for('static', filename='images/spiderman.jpg') }}" alt="pelicula">
+                            </div>
+                            <div class="cajas-p2">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                            </div>
+                        </div>
+
+                        <div class="cajas">
+                            <div class="cajas-p1">
+                                <img src="{{ url_for('static', filename='images/spiderman.jpg') }}" alt="pelicula">
+                            </div>
+                            <div class="cajas-p2">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                            </div>
+                        </div>
+
+                        <div class="cajas">
+                            <div class="cajas-p1">
+                                <img src="{{ url_for('static', filename='images/spiderman.jpg') }}" alt="pelicula">
+                            </div>
+                            <div class="cajas-p2">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                            </div>
+                        </div>
+
+                        <div class="cajas">
+                            <div class="cajas-p1">
+                                <img src="{{ url_for('static', filename='images/spiderman.jpg') }}" alt="pelicula">
+                            </div>
+                            <div class="cajas-p2">
+                                <h3>Lorem ipsum dolor sit amet.</h3>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+    </body>
+</html>

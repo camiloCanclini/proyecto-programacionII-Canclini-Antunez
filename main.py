@@ -2,6 +2,19 @@ from flask import Flask, render_template
 
 app = Flask(__name__)
 
+
 @app.route("/")
-def hello_world():
-    return render_template("index.html")
+def principal():
+    return render_template("principal.html")
+
+
+@app.route("/login")
+def login():
+    return render_template("login_user.html")
+
+@app.route("/user")
+def user():
+    return render_template("movie_info.html")
+
+
+

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/login-style.css' ) }}">
+        <title>Ingresar</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul class="navbar-p1">
+                    <li><a href="">Inicio</a></li>
+                    <li><a href="#">Cartelera</a></li>
+                </ul>
+                <div class="navbar-p2">
+                    <input id="search" type="search">
+                    <input id="submit" type="submit" value="Buscar">
+                </div>
+            </nav>
+
+            <section id="login">
+                <div class="login-contain">
+                    <h1 class="login-title">Cinematronic</h1>
+                    <form action="GET">
+                        <label for="user">Usuario</label><br>
+                        <input type="text" id="user" placeholder="Charles_Chaplin"><br>
+                        <label for="password">Contraseña</label><br>
+                        <input type="password" id="password" placeholder="WarWorlds123"><br><br>
+                        <input id="submit" type="submit" value="Ingresar">
+                    </form>
+                </div>
+            </section>
+
+        </header>
+    </body>
+</html>
