@@ -1,5 +1,7 @@
-from flask import Flask, render_template, jsonify
+from flask import Flask, render_template, jsonify, Response
+from http import HTTPStatus
 import json
+
 
 
 app = Flask(__name__)
@@ -17,13 +19,16 @@ def login():
 def user():
     return render_template("movie_info.html")
 
-@app.route("/json")
+@app.route("/prueba", methods=["GET"])
 def get_data():
-    handler = open('Json/cuentas.json', 'r', encoding='utf-8')
-    data = handler.read()
-    file = json.loads(data)
-    return jsonify(file)
-
+    with open('Json/cuentas.json') as content:
+        usuarios = json.load(content)
+    for usuario in usuarios['users']:
+        if usuario['username'] == "admin":
+            return usuario['username']
+        else:
+            return Response("{}",HTTPStatus.NOT_EXTENDED)
+        
 
 @app.route("/user/upload_movie")
 def user2():
