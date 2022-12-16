@@ -14,22 +14,17 @@ a {
 
 h1 {
     color: #fff;
-    margin-top: 20px;
-}
-
-main {
-    width: 100%;
-    display: flex;
-    background-color: blue;
-
 }
 
 /*BARRA DE NAVEGACION*/
-
+main{
+    min-height: 94vh;
+    background-color: rgb(31, 31, 31);
+}
 .navbar {
     display: flex;
     width: 100%;
-    height: 50px;
+    height: 6vh;
     background-color: black;
     padding: 20px;
 }
@@ -79,21 +74,20 @@ main {
 
 
 /*SECCION DE PELICULAS*/
+#peliculas-actuales{
+    min-height: 100%;
 
-#peliculas-actuales {
-    display: flex;
-    width: 80%;
 }
-
 #estrenos-container {
     width: 100%;
+    min-height: 100%;
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
     gap: 20px;
     height: auto;
     text-align: center;
-    background-color: rgb(31, 31, 31);
+    
 }
 
 .container__cajas {
@@ -137,4 +131,43 @@ main {
     background-color: rgb(31, 31, 31);
     color: #fff;
     border-radius: 0px 0px 20px 20px;
+}
+
+#form_api_search{
+    width: 100%;
+    height: 10vh;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+}
+#form_api_search > *{
+    margin: 0;
+    border: 0;
+    height: 50%;
+    flex-grow: 1;
+    min-width: 100px;
+    font-family:Arial;
+	font-size:19px;
+	font-weight:bold;
+	font-style:italic;
+	padding:9px 22px;
+	text-decoration:none;
+}
+#form_api_search > input[type="submit"]{
+    max-width: 25%;
+    box-shadow:inset 0px 0px 15px 3px #20509e;
+	background:linear-gradient(to bottom, #4b82db 5%, #6b92e0 100%);
+	background-color:#4b82db;
+	color:#ffffff;
+	cursor:pointer;
+	
+	text-shadow:0px 1px 0px #263666;
+}
+#form_api_search > input[type="submit"]:hover {
+	background:linear-gradient(to bottom, #6b92e0 5%, #4b82db 100%);
+	background-color:#6b92e0;
+}
+#form_api_search > input[type="submit"]:active{
+	position:relative;
+	top:1px;
 }

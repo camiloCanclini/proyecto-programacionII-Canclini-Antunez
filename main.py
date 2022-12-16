@@ -15,6 +15,9 @@ def login():
 @app.route("/user")
 def user():
     return render_template("movie_info.html")
+@app.route("/user/upload_movie")
+def user2():
+    return render_template("user_menu_upload_movie.html")
 
 
 
