@@ -10,14 +10,11 @@
     <body>
         <header>
             <nav class="navbar">
-                <ul class="navbar-p1">
+                <ul class="navbar_ul">
+                    <li><h1>MOVI</h1></li>
                     <li><a href="">Inicio</a></li>
                 </ul>
-                <div class="navbar-p2">
-                    <input id="search" type="search">
-                    <input id="submit" type="submit" value="Buscar">
-                </div>
-                <div class="navbar-p3">
+                <div class="navbar_user">
                     <i class="fa-solid fa-circle-user"></i>
                     <span id="user">Nombre del usuario</span>
                 </div>
@@ -40,6 +37,17 @@
                 </div>
             </aside>
             <section id="peliculas-actuales">
+                <div id="buscador">
+                    <h1>Agregar Pelicula</h1>
+                    <div class="container__cajas">
+                        <form action="" id="form_api_search">
+                            <input type="text" placeholder="Movie Name" id="input_search">
+                            <input type="submit" value="Search">
+                        </form>
+                        <div id="display_movies" style="display: none">
+                        </div>
+                    </div>
+                </div>
                 <div id="estrenos-container">
                     <h1>Peliculas cargadas</h1>
                     <div class="container__cajas">
@@ -81,4 +89,5 @@
             </section>
         </main>
     </body>
+    <script src="{{ url_for('static', filename='js/omdb_api_query.js') }}"></script>
 </html>

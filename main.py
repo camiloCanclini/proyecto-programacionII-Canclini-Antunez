@@ -45,14 +45,9 @@ def user():
     if searchUserInJson(username, password, 'database/cuentas.json'):
         return render_template('movie_info.html')
     else:
-        return render_template('login_user.html')
+        return render_template('login.html')
 """
-+-- LOGGED USERS --+
-"""
-@app.route("/user/upload_movie")
-def user2():
-    return render_template("user_menu_upload_movie.html")
-"""
+
 +---------------------+
 +-- BOOT APP SERVER --+
 +---------------------+ 
