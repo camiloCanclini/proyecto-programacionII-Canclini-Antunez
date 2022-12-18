@@ -3,41 +3,50 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style-users.css') }}">
-        <title>index</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/general.css') }}">
+        <script src="https://kit.fontawesome.com/8dd1321ced.js" crossorigin="anonymous"></script>
+        <title>Pagina</title>
     </head>
     <body>
         <header>
             <nav class="navbar">
                 <ul class="navbar_ul">
                     <li><h1>MOVI</h1></li>
-                    <li><a href="">Inicio</a></li>
+                    <li><a href="./">Inicio</a></li>
                     <li><a href="/login">Ingresar</a></li>
                 </ul>
             </nav>
         </header>
-        
         <main>
-
             <aside id="filter">
                 <div class="filter-container">
                     <h1>Filtrar</h1>
                     <form action="GET">
                         <div id="buscar_directores">
                             <input type="text" id="directors" placeholder="Director">
-                            <input class="search" type="submit" value="buscar">
+                            <input type="submit" value="buscar">
                         </div><br>
                         <div id="buscar_nombre">
                             <input type="text" id="movie_name" placeholder="Pelicula">
-                            <input class="search" type="submit" value="buscar">
+                            <input type="submit" value="buscar">
                         </div>
                     </form>
                 </div>
             </aside>
-
             <section id="peliculas-actuales">
+                <div id="buscador">
+                    <h1>Agregar Pelicula</h1>
+                    <div class="container__cajas">
+                        <form action="" id="form_api_search">
+                            <input type="text" placeholder="Movie Name" id="input_search">
+                            <input type="submit" value="Search">
+                        </form>
+                        <div id="display_movies" style="display: none">
+                        </div>
+                    </div>
+                </div>
                 <div id="estrenos-container">
-                    <h1>Ultimas peliculas cargadas</h1>
+                    <h1>Peliculas cargadas</h1>
                     <div class="container__cajas">
                         <div class="cajas">
                             <div class="caja-principal">
@@ -45,8 +54,9 @@
                                     <img src="{{ url_for('static', filename='images/spiderman.jpg') }}" alt="pelicula">
                                 </div>
                                 <div class="cajas-p2">
-                                    <div id="delete">
-                                        <i class="fa-regular fa-pen-to-square"></i>
+                                    <div id="ABM">
+                                        <a id="edit" href=""><i class="fa-regular fa-pen-to-square"></i></a>
+                                        <i id="delete" class="fa-solid fa-xmark"></i>
                                     </div>
                                     <h3 class="movie-title">Lorem ipsum dolor sit amet.</h3>
                                     <div class="movie-info">
@@ -75,6 +85,6 @@
                 </div>
             </section>
         </main>
-
     </body>
+    <script src="{{ url_for('static', filename='js/omdb_api_query.js') }}"></script>
 </html>

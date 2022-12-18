@@ -4,10 +4,10 @@ from core.functions import searchUserInJson
 
 @app.route("/")
 def principal():
-    return render_template("index.html",)
+    return render_template("public/index.html",)
 @app.route("/login")
 def login():
-    return render_template("login.html")
+    return render_template("public/login.html")
 @app.route("/user", methods=['POST'])
 def user(): 
     parametros = request.form
@@ -15,9 +15,9 @@ def user():
     username = parametros['username']
     password = parametros['pass']
     if searchUserInJson(username, password, 'database/cuentas.json'):
-        return render_template('movie_info.html')
+        return render_template('users/movie_info.html')
     else:
-        return render_template('login_user.html')
+        return render_template('public/login.html')
 @app.route("/user/upload_movie")
 def user2():
     return render_template("user_menu_upload_movie.html")

@@ -1,11 +1,16 @@
 {
     "1":{
         "titulo":"sonic 2 La pelicula - 2D CAST",
-        "fecha":"22 de junio",
-        "horarios":"17:30 hs",
+        "año":"22 de junio",
+        "director":"17:30 hs",
         "Genero":"Aventura",
-        "Calificacion":"+13"
-        
+        "sinopsis":"+13",
+        "Comentarios":{
+            "1":{
+                "nombre_usuario": "pepito",
+                "comentario": "esta pelicula es una mierda"
+            }
+        }
         
     },
     "2":{
