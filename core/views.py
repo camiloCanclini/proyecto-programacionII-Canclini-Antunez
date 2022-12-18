@@ -23,12 +23,11 @@ def user():
 def addMovies():
     parametros = request.args
     print (parametros["id"])
-    
-    url= addMovie(parametros["id"]) 
-
-    return "<h1>" + url + "</h1>"
-
-
+    url= addMovie(parametros["id"])
+    if url == True:
+        return render_template('users/movie_info.html')
+    else:
+        return "<h1> A ocurrido un error </h1>"     
 
 @app.route("/user/upload_movie")
 def user2():

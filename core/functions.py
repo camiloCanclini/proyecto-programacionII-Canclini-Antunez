@@ -48,18 +48,10 @@ def addMovie(id):
 
         print(d)
 
-        with open ("database/peliculas.json", "w") as f:
+        with open ("database/peliculas.json", "a") as f:
             json.dump(d, f, indent=4)
-
-        
-       
-
-
-
-    
-       
-
-    return url_handler
+            
+    return True
 
 
     
