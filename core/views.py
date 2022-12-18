@@ -1,6 +1,6 @@
 from core import app
 from flask import render_template, request
-from core.functions import searchUserInJson
+from core.functions import *
 
 @app.route("/")
 def principal():
