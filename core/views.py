@@ -1,6 +1,6 @@
 from core import app
-from flask import render_template, request
-from core.functions import searchUserInJson
+from flask import render_template, request, Response
+from core.functions import *
 
 @app.route("/")
 def principal():
@@ -18,6 +18,18 @@ def user():
         return render_template('movie_info.html')
     else:
         return render_template('login_user.html')
+
+@app.route("/user/addMovie", methods=['GET'])
+def addMovies():
+    parametros = request.args
+    print (parametros["id"])
+    
+    url= addMovie(parametros["id"]) 
+
+    return "<h1>" + url + "</h1>"
+
+
+
 @app.route("/user/upload_movie")
 def user2():
     return render_template("user_menu_upload_movie.html")
