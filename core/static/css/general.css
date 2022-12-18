@@ -72,17 +72,19 @@ main {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: 20%;
-    padding: 1rem .2rem;
+    max-width: 400px;
+    padding: 1rem .5rem;
     background-color: rgb(34, 34, 34);
+    
 }
 .filter-container {
     height: 100%;
     width: 100%;
     display: flex;
     background-color: rgb(20, 20, 20);
+    padding: 1rem;
 }
-form {
+.filter-container > form {
     width: 100%;
     font-family: Helvetica, sans-serif;
     display: flex;
@@ -91,11 +93,11 @@ form {
     justify-content: start;
     text-align: center;
 }
-form > *{
+.filter-container > form > *{
     max-width: 100%;
     margin: 1rem 0;
 }
-form > * > input{
+.filter-container > form > * > input{
     width: 100%;
     border: none;
     border-radius: .2rem;

@@ -86,10 +86,11 @@
     width: 100%;
     box-sizing: border-box;
     display: flex;
-    gap: 20px;
     align-items: center;
+    border-radius: 1rem;
+    overflow: hidden;
 }
-#form_api_search>* {
+#form_api_search > *{
     margin: 0;
     border: 0;
     flex-grow: 1;

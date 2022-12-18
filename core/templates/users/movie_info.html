@@ -4,6 +4,7 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="{{ url_for('static', filename='css/general.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/user_logged.css') }}">
         <script src="https://kit.fontawesome.com/8dd1321ced.js" crossorigin="anonymous"></script>
         <title>Pagina</title>
     </head>
@@ -17,22 +18,9 @@
                 </ul>
             </nav>
         </header>
+        {% include 'components/header.html' %}
         <main>
-            <aside id="filter">
-                <div class="filter-container">
-                    <h1>Filtrar</h1>
-                    <form action="GET">
-                        <div id="buscar_directores">
-                            <input type="text" id="directors" placeholder="Director">
-                            <input type="submit" value="buscar">
-                        </div><br>
-                        <div id="buscar_nombre">
-                            <input type="text" id="movie_name" placeholder="Pelicula">
-                            <input type="submit" value="buscar">
-                        </div>
-                    </form>
-                </div>
-            </aside>
+            {% include "components/aside_index.html"%}
             <section id="peliculas-actuales">
                 <div id="buscador">
                     <h1>Agregar Pelicula</h1>

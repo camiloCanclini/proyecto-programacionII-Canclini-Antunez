@@ -48,6 +48,7 @@ function displayResponse(movies, error=0){
 			movieImg.setAttribute("src",i["Poster"]);
 			titulo.innerHTML = i["Title"];
 			id.innerHTML = i["imdbID"];
+			link.setAttribute("HREF", "/user/addMovie?id="+i["imdbID"])
 	
 			movieInfo.appendChild(titulo);
 			movieInfo.appendChild(id);
