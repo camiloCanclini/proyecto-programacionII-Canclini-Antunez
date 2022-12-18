@@ -3,38 +3,13 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="{{ url_for('static', filename='css/style-users.css') }}">
-        <title>index</title>
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/general.css') }}">
+        <title>Movi Page Antunez Canclini</title>
     </head>
     <body>
-        <header>
-            <nav class="navbar">
-                <ul class="navbar_ul">
-                    <li><h1>MOVI</h1></li>
-                    <li><a href="">Inicio</a></li>
-                    <li><a href="/login">Ingresar</a></li>
-                </ul>
-            </nav>
-        </header>
-        
+        {% include 'components/header.html' %}
         <main>
-
-            <aside id="filter">
-                <div class="filter-container">
-                    <h1>Filtrar</h1>
-                    <form action="GET">
-                        <div id="buscar_directores">
-                            <input type="text" id="directors" placeholder="Director">
-                            <input class="search" type="submit" value="buscar">
-                        </div><br>
-                        <div id="buscar_nombre">
-                            <input type="text" id="movie_name" placeholder="Pelicula">
-                            <input class="search" type="submit" value="buscar">
-                        </div>
-                    </form>
-                </div>
-            </aside>
-
+            {% include 'components/aside_index.html'%}
             <section id="peliculas-actuales">
                 <div id="estrenos-container">
                     <h1>Ultimas peliculas cargadas</h1>
@@ -75,6 +50,5 @@
                 </div>
             </section>
         </main>
-
     </body>
 </html>

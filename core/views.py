@@ -1,13 +1,13 @@
 from core import app
-from flask import render_template, request, Response
+from flask import render_template, request
 from core.functions import *
 
 @app.route("/")
 def principal():
-    return render_template("index.html",)
+    return render_template("public/index.html",)
 @app.route("/login")
 def login():
-    return render_template("login.html")
+    return render_template("public/login.html")
 @app.route("/user", methods=['POST'])
 def user(): 
     parametros = request.form
@@ -15,7 +15,7 @@ def user():
     username = parametros['username']
     password = parametros['pass']
     if searchUserInJson(username, password, 'database/cuentas.json'):
-        return render_template('movie_info.html')
+        return render_template('users/movie_info.html')
     else:
         return render_template('login_user.html')
 

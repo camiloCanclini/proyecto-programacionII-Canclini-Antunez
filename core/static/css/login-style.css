@@ -1,13 +1,12 @@
 
 #login {
     width: 100%;
-    height: 90vh;
+    height: 100vh;
     display: flex;
     align-items: center;
     background-color: rgb(231, 231, 231);
 
 }
-
 .login-contain {
     display: flex;
     flex-direction: column;
@@ -17,7 +16,6 @@
     background:linear-gradient(90deg, rgba(131,58,180,1) 0%, rgba(69,119,252,1) 100%);
     border-radius: 20px;
 }
-
 .login-title {
     display: flex;
     justify-content: center;
@@ -25,8 +23,6 @@
     width: 100%;
     height: 100px;
 }
-
-
 form {
     padding: 50px;
     display: flex;
@@ -37,14 +33,12 @@ form {
     height: 100%;
     color: #fff;
 }
-
 form > input {
     width: 50%;
     padding: 10px;
     border-radius: 10px;
     border: none;
 }
-
 #submit {
     width: 25%;
     
