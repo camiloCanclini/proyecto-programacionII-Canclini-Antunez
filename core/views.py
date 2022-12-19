@@ -23,7 +23,8 @@ def user():
 def addMovies():
     parametros = request.args
     print (parametros["id"])
-    url= addMovie(parametros["id"])
+    
+    url= addMovie(parametros["id"]) 
     if url == True:
         return render_template('users/movie_info.html')
     else:

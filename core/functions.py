@@ -24,19 +24,11 @@ def addMovie(id):
         print(data)
 
         titulo = data["Title"]
-        print(titulo)
-
         sinopsis = data["Plot"]
-        print(sinopsis)
-
         director = data["Director"]
-        print(director)
-
         año = data["Year"]
-        print(año)
-
         genero = data["Genre"]
-        print(genero)
+        comments = {"Username":"", "Comment":""}
 
         d = dict()
         d ["Title"] = titulo
@@ -44,15 +36,43 @@ def addMovie(id):
         d ["Director"] = director
         d ["Genre"] = genero
         d ["Year"] = año
-        d ["Comments"] = dict()
+        d ["Comments"] = []
 
-        print(d)
+        def escribir_json(data, filename="database/peliculas.json"):
+            with open (filename, "w") as f:
+                json.dump(data, f, indent=4)
 
-        with open ("database/peliculas.json", "a") as f:
-            json.dump(d, f, indent=4)
-            
+        with open ("database/peliculas.json") as json_file:
+            data = json.load(json_file)
+            temp = data["Movies"]
+            temp.append(d)
+
+        escribir_json(data)
+
+
     return True
 
 
-    
+def editMovie(nombrePelicula):
+
+        with open ("database/peliculas.json", "r") as f:
+            dict = json.load(f)
+
+            for info in dict['Movies']:
+                if info['Title'] == nombrePelicula:
+                    info["Title"] = "Mono Azul"
+                    info ["Plot"] = "La pelicula del tipo que no tenia piernas y ahora es un mono azul...con piernas, epico"
+                    info["Director"] = "Enano Bostero"
+                    info ["Genre"] = "Infantil"
+                    info["Year"] = "2022 vamo messi"
+                    
+                    print(info)
+
+editMovie("Avatar")
+
+
+#def deleteMovie(nombrePelicula):
+
+
+
         

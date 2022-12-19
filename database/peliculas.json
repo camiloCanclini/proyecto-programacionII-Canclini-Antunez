@@ -1,8 +1,26 @@
 {
-    "Title": "Spider-Man: No Way Home",
-    "Plot": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
-    "Director": "Jon Watts",
-    "Genre": "Action, Adventure, Fantasy",
-    "Year": "2021",
-    "Comments": {}
+    "Movies": [
+        {
+            "Title": "Avatar",
+            "Plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+            "Director": "James Cameron",
+            "Genre": "Action, Adventure, Fantasy",
+            "Year": "2009",
+            "Comments": []
+        },
+        {
+            "Title": "Batman Returns",
+            "Plot": "While Batman deals with a deformed man calling himself the Penguin wreaking havoc across Gotham with the help of a cruel businessman, a female employee of the latter becomes the Catwoman with her own vendetta.",
+            "Director": "Tim Burton",
+            "Genre": "Action, Crime, Fantasy",
+            "Year": "1992",
+            "Comments": [
+                {
+                    "Username": "James24",
+                    "Comment": "Buenarda 10/10"
+
+                }
+            ]
+        }
+    ]
 }
