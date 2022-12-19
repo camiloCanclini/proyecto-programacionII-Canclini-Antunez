@@ -1,86 +1,28 @@
 {
     "Movies": [
         {
+            "Id": "tt0499549",
             "Title": "Avatar",
             "Plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
             "Director": "James Cameron",
             "Genre": "Action, Adventure, Fantasy",
             "Year": "2009",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNjA3NGExZDktNDlhZC00NjYyLTgwNmUtZWUzMDYwMTZjZWUyXkEyXkFqcGdeQXVyMTU1MDM3NDk0._V1_SX300.jpg",
             "Comments": [
                 {
-                    "Username": "James24",
-                    "Comment": "Buenarda 10/10"
-                },
-                {
-                    "Username": "James24",
-                    "Comment": "Buenarda 10/10"
-                },
-                {
-                    "Username": "James24",
-                    "Comment": "Buenarda 10/10"
+                    "username":"Joaqo123",
+                    "comment": "Muy buena"
                 }
             ]
         },
         {
-            "Title": "Batman Returns",
-            "Plot": "While Batman deals with a deformed man calling himself the Penguin wreaking havoc across Gotham with the help of a cruel businessman, a female employee of the latter becomes the Catwoman with her own vendetta.",
-            "Director": "Tim Burton",
-            "Genre": "Action, Crime, Fantasy",
-            "Year": "1992",
-            "Comments": [
-                {
-                    "Username": "James24",
-                    "Comment": "Buenarda 10/10"
-                }
-            ]
-        },
-        {
-            "Title": "Avatar",
-            "Plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
-            "Director": "James Cameron",
-            "Genre": "Action, Adventure, Fantasy",
-            "Year": "2009",
-            "Comments": [
-                {
-                    "Username": "James24",
-                    "Comment": "Buenarda 10/10"
-                },
-                {
-                    "Username": "James24",
-                    "Comment": "Buenarda 10/10"
-                },
-                {
-                    "Username": "James24",
-                    "Comment": "Buenarda 10/10"
-                }
-            ]
-        },
-        {
-            "Title": "Avatar: The Last Airbender - The Legend So Far",
-            "Plot": "Avatar Roku summarizes Aang's journeys so far.",
-            "Director": "N/A",
-            "Genre": "Animation",
-            "Year": "2005",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BZGQ1ZTNmNzItNGYyMC00MDk2LWJiZDAtZTkwZDFlNWJlYTVjXkEyXkFqcGdeQXVyODUxNDExNTg@._V1_SX300.jpg",
-            "Comments": [
-                {
-                    "Username": "James24",
-                    "Comment": "Buenarda 10/10"
-                },
-                {
-                    "Username": "James24",
-                    "Comment": "Buenarda 10/10"
-                }
-            ]
-        },
-        {
-            "Id": "tt0075148",
-            "Title": "Rocky",
-            "Plot": "A small-time Philadelphia boxer gets a supremely rare chance to fight the world heavyweight champion in a bout in which he strives to go the distance for his self-respect.",
-            "Director": "John G. Avildsen",
-            "Genre": "Drama, Sport",
-            "Year": "1976",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BNTBkMjg2MjYtYTZjOS00ODQ0LTg0MDEtM2FiNmJmOGU1NGEwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+            "Id": "tt1877830",
+            "Title": "The Batman",
+            "Plot": "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
+            "Director": "Matt Reeves",
+            "Genre": "Action, Crime, Drama",
+            "Year": "2022",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_SX300.jpg",
             "Comments": []
         }
     ]

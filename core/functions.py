@@ -43,7 +43,7 @@ def addMovie(id):
         d ["Genre"] = genero
         d ["Year"] = año
         d ["Poster"] = poster
-        d ["Comments"] = []
+        d ["Comments"] = [comments]
 
         def escribir_json(data, filename="database/peliculas.json"):
             with open (filename, "w") as f:
@@ -79,6 +79,8 @@ editMovie("Avatar")
 
 
 #def deleteMovie(nombrePelicula):
+
+
 
 def getGenres():
     with open ("database/peliculas.json") as json_file:
