@@ -34,13 +34,27 @@
                 const cajas_p2 = document.createElement("DIV");
                 cajas_p2.setAttribute("class","cajas-p2");
                 caja_principal.appendChild(cajas_p2);
+                
+                const abm = document.createElement("DIV");
+                abm.setAttribute("id","ABM");
+                cajas_p2.appendChild(abm);
 
-                const delete_ = document.createElement("DIV");
+                const edit_ = document.createElement("A");
+                edit_.setAttribute("id","edit");
+                edit_.setAttribute("href","user/edit_movie?Id="+i['Id']);
+                abm.appendChild(edit_);
+
+                const icono_edit = document.createElement("i");
+                icono_edit.setAttribute("class","fa-regular fa-pen-to-square");
+                edit_.appendChild(icono_edit);
+
+                const delete_ = document.createElement("A");
                 delete_.setAttribute("id","delete");
-                cajas_p2.appendChild(delete_);
+                delete_.setAttribute("href","user/delete_movie?Id="+i['Id']);
+                abm.appendChild(delete_);
 
                 const icono_delete = document.createElement("i");
-                icono_delete.setAttribute("class","fa-regular fa-pen-to-square");
+                icono_delete.setAttribute("class","fa-solid fa-xmark");
                 delete_.appendChild(icono_delete);
 
                 const movie_title = document.createElement("H3");
@@ -72,21 +86,27 @@
                 const comments_container = document.createElement("DIV");
                 comments_container.setAttribute("class","comments-container");
                 comments.appendChild(comments_container);
+                if(i["Comments"].length != 0){
 
-                for (const j of i["Comments"]) {
-
-                    const comment = document.createElement("DIV");
-                    comment.setAttribute("class","comment");
-                    comments_container.appendChild(comment);
+                    for (const j of i["Comments"]) {
                     
-                    const nombre_comment = document.createElement("SPAN");
-                    comment.appendChild(nombre_comment);
-                    nombre_comment.innerHTML = j["Username"];
-
-                    const text_comment = document.createElement("SPAN");
-                    comment.appendChild(text_comment);
-                    text_comment.innerHTML = j["Comment"];
+                        const comment = document.createElement("DIV");
+                        comment.setAttribute("class","comment");
+                        comments_container.appendChild(comment);
+                        
+                        const nombre_comment = document.createElement("SPAN");
+                        comment.appendChild(nombre_comment);
+                        nombre_comment.innerHTML = "@"+j["Username"];
+    
+                        const text_comment = document.createElement("SPAN");
+                        comment.appendChild(text_comment);
+                        text_comment.innerHTML = j["Comment"];
+                    }
+                }else{
+                    comments_container.innerHTML = "No Hay Comentarios";
+                    comments_container.classList.add("no-comments");
                 }
+                
 
                 movie_title.innerHTML = i["Title"];
                 a.innerHTML = i["Plot"];

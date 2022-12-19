@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/general.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/user_logged.css') }}">
+        <link rel="stylesheet" href="{{ url_for('static', filename='css/edit_movie.css') }}">
+        <script src="https://kit.fontawesome.com/8dd1321ced.js" crossorigin="anonymous"></script>
+        <title>Pagina</title>
+    </head>
+    <body>
+        <header>
+            <nav class="navbar">
+                <ul class="navbar_ul">
+                    <li><h1>MOVI</h1></li>
+                    <li><a href="./">Inicio</a></li>
+                    <li><a href="/login">Ingresar</a></li>
+                </ul>
+            </nav>
+        </header>
+        {% include 'components/header.html' %}
+        <main>
+            <h1 class="titles">MODIFICACIÓN PELICULA</h1>
+        <form action="update_movie?Id={{ infoMovie['Id'] }}" method="POST" id="form">
+            <span name="id" value="{{ infoMovie['Id'] }}"></span>
+            <div>
+                <label>Titulo</label>
+                <input id="titulo" name="Title" type="text" value="{{ infoMovie['Title'] }}">
+            </div>
+            <div>
+                <label>Sinopsis</label>
+                <textarea id="plot" name="Plot" type="text" value="">{{ infoMovie['Plot'] }}</textarea>
+            </div>
+            <div>
+                <label>Director</label>
+                <input id="director" name="Director" type="text" value="{{ infoMovie['Director'] }}">
+            </div>
+            <div>
+                <label>Género</label>
+                <input id="genero" name="Genre" type="text" value="{{ infoMovie['Genre'] }}">
+            </div>
+            <div>
+                <label>Año</label>
+                <input id="año" name="Year" type="text" value="{{ infoMovie['Year'] }}">
+            </div>
+            <div>
+                <label>Poster</label>
+                <input id="poster" name="Poster" type="text" value="{{ infoMovie['Poster'] }}">
+            </div>
+            <input type="submit" name="actualizar" value="ACTUALIZAR INFORMACIÓN">
+        </form>
+        </main>
+    </body>
+</html>
