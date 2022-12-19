@@ -6,7 +6,20 @@
             "Director": "James Cameron",
             "Genre": "Action, Adventure, Fantasy",
             "Year": "2009",
-            "Comments": []
+            "Comments": [
+                {
+                    "Username": "James24",
+                    "Comment": "Buenarda 10/10"
+                },
+                {
+                    "Username": "James24",
+                    "Comment": "Buenarda 10/10"
+                },
+                {
+                    "Username": "James24",
+                    "Comment": "Buenarda 10/10"
+                }
+            ]
         },
         {
             "Title": "Batman Returns",
@@ -18,9 +31,57 @@
                 {
                     "Username": "James24",
                     "Comment": "Buenarda 10/10"
-
                 }
             ]
+        },
+        {
+            "Title": "Avatar",
+            "Plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
+            "Director": "James Cameron",
+            "Genre": "Action, Adventure, Fantasy",
+            "Year": "2009",
+            "Comments": [
+                {
+                    "Username": "James24",
+                    "Comment": "Buenarda 10/10"
+                },
+                {
+                    "Username": "James24",
+                    "Comment": "Buenarda 10/10"
+                },
+                {
+                    "Username": "James24",
+                    "Comment": "Buenarda 10/10"
+                }
+            ]
+        },
+        {
+            "Title": "Avatar: The Last Airbender - The Legend So Far",
+            "Plot": "Avatar Roku summarizes Aang's journeys so far.",
+            "Director": "N/A",
+            "Genre": "Animation",
+            "Year": "2005",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZGQ1ZTNmNzItNGYyMC00MDk2LWJiZDAtZTkwZDFlNWJlYTVjXkEyXkFqcGdeQXVyODUxNDExNTg@._V1_SX300.jpg",
+            "Comments": [
+                {
+                    "Username": "James24",
+                    "Comment": "Buenarda 10/10"
+                },
+                {
+                    "Username": "James24",
+                    "Comment": "Buenarda 10/10"
+                }
+            ]
+        },
+        {
+            "Id": "tt0075148",
+            "Title": "Rocky",
+            "Plot": "A small-time Philadelphia boxer gets a supremely rare chance to fight the world heavyweight champion in a bout in which he strives to go the distance for his self-respect.",
+            "Director": "John G. Avildsen",
+            "Genre": "Drama, Sport",
+            "Year": "1976",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNTBkMjg2MjYtYTZjOS00ODQ0LTg0MDEtM2FiNmJmOGU1NGEwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+            "Comments": []
         }
     ]
 }

@@ -133,7 +133,7 @@ main {
     text-align: center;
     background-color: rgb(31, 31, 31);
 }
-.container__cajas {
+#container__cajas {
     display: flex;
     flex-wrap: wrap;
     gap: 30px;

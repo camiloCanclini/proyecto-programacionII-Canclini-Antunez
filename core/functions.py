@@ -13,6 +13,9 @@ def searchUserInJson (username, password, path_json):
                 return True   
         print("\nUser: ", username, "Was not found\n")
         return False
+def getMovies():
+    with open ("database/peliculas.json") as json_file:
+        return json.load(json_file)
     
 def addMovie(id):
     url_handler = urllib.request.urlopen('http://www.omdbapi.com/?apikey=cf09fe5c&i=' + id)
@@ -23,19 +26,23 @@ def addMovie(id):
         print(type(data))
         print(data)
 
+        imdbID = data["imdbID"]
         titulo = data["Title"]
         sinopsis = data["Plot"]
         director = data["Director"]
         año = data["Year"]
         genero = data["Genre"]
         comments = {"Username":"", "Comment":""}
+        poster = data["Poster"]
 
         d = dict()
+        d ["Id"] = imdbID
         d ["Title"] = titulo
         d ["Plot"] = sinopsis
         d ["Director"] = director
         d ["Genre"] = genero
         d ["Year"] = año
+        d ["Poster"] = poster
         d ["Comments"] = []
 
         def escribir_json(data, filename="database/peliculas.json"):
@@ -73,6 +80,40 @@ editMovie("Avatar")
 
 #def deleteMovie(nombrePelicula):
 
-
-
-        
+def getGenres():
+    with open ("database/peliculas.json") as json_file:
+        file = json.load(json_file)
+        genresInDB = set()
+        for i in file["Movies"]:
+            print(i["Genre"])
+            genre = i["Genre"]
+            if "," in genre:
+                genres = genre.split(",")
+                for i in genres:
+                    genresInDB.add(i)
+                continue
+            if genre not in genresInDB:
+                genresInDB.add(genre)
+        print(genresInDB)
+        prejson = { 'Genres': list(genresInDB) }
+        print(dict(prejson))
+        return json.dumps(prejson)
+def getDirectors():
+    with open ("database/peliculas.json") as json_file:
+        file = json.load(json_file)
+        directorInDB = set()
+        print(file)
+        for i in file["Movies"]:
+            print(i["Director"])
+            director = i["Director"]
+            if "," in director:
+                genres = director.split(",")
+                for i in genres:
+                    directorInDB.add(i)
+                continue
+            if director not in directorInDB:
+                directorInDB.add(director)
+        print(directorInDB)
+        prejson = { 'Directors': list(directorInDB) }
+        print(dict(prejson))
+        return json.dumps(prejson)
