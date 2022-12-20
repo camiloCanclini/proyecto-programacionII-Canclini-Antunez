@@ -2,6 +2,8 @@ from core import app
 import json
 import urllib.request
 
+#Buscar usuarios en el JSON que se encuentra en la carpeta database/cuentas.json
+
 def searchUserInJson (username, password, path_json):
     with open(path_json) as content:
         usuarios = json.load(content)
@@ -13,10 +15,16 @@ def searchUserInJson (username, password, path_json):
                 return True   
         print("\nUser: ", username, "Was not found\n")
         return False
+
+
+#Obtener las peliculas que se guardan en el json que se encuentra en la carpeta database/peliculas.json
+
 def getMovies():
     with open ("database/peliculas.json") as json_file:
         return json.load(json_file)
-    
+
+#Obtiene el ID de las peliculas
+
 def getMovieInfoById(IdMovie):
     with open ("database/peliculas.json", "r") as f:
             dict = json.load(f)
@@ -24,7 +32,14 @@ def getMovieInfoById(IdMovie):
                 if movie['Id'] == IdMovie:
                     #print(movie)
                     return movie                 
-                
+
+
+#----------------#
+#      A B M
+#----------------#
+
+#Funcion de añadir peliculas al html ---> movie_info.html
+
 def addMovie(id):
     url_handler = urllib.request.urlopen('http://www.omdbapi.com/?apikey=cf09fe5c&i=' + id)
 
@@ -63,9 +78,10 @@ def addMovie(id):
 
         escribir_json(data)
 
-
     return True
 
+
+#Funcion de editar la informacion de las peliculas 
 
 def editMovie(IdMovie, newTitle, newPlot, newDirector, newGenre, newYear, newPoster):
     with open ("database/peliculas.json", "r") as f:
@@ -84,7 +100,10 @@ def editMovie(IdMovie, newTitle, newPlot, newDirector, newGenre, newYear, newPos
                 print(movie)
         with open ("database/peliculas.json", "w") as f:
             json.dump(dict, f, indent=4)
-            
+
+
+#Funcion de eliminar las peliculas
+
 def deleteMovie(IdMovie):
     print("El ID ES",IdMovie)
     with open ("database/peliculas.json", "r") as f:
@@ -103,8 +122,12 @@ def deleteMovie(IdMovie):
         return False
         
 
-# editMovie("Avatar")
 
+#-------------------------#
+#Funciones de los servicios (services.py)
+#-------------------------#
+
+#Obtiene el genero de cada pelicula que fue agregada en la pagina
 
 def getGenres():
     with open ("database/peliculas.json") as json_file:
@@ -124,6 +147,9 @@ def getGenres():
         prejson = { 'Genres': list(genresInDB) }
         print(dict(prejson))
         return json.dumps(prejson, indent=4)
+
+
+#Obtiene los diferentes directores que tiene cada pelicula agregada 
 
 def getDirectors():
     with open ("database/peliculas.json") as json_file:
@@ -146,6 +172,8 @@ def getDirectors():
         return json.dumps(prejson, indent=4)
 
 
+#Obtiene los posters de las peliculas agregadas
+
 def getMoviesPoster():
     with open ("database/peliculas.json") as json_file:
         file = json.load(json_file)
@@ -161,6 +189,8 @@ def getMoviesPoster():
 
 #getMoviesPoster()
 
+
+#Obtiene las peliculas agregadas que fueron dirigidas por el mismo director.
 
 def getMoviesByDirectors(directorSearched):
     with open ("database/peliculas.json") as json_file:

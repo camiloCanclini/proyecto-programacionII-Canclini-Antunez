@@ -3,6 +3,12 @@ from core import app
 from flask import render_template, request
 from core.functions import *
 
+
+#------------------#
+# S E R V I C I O S
+#------------------#
+
+
 @app.route("/services/get_movies")
 def response():
     return getMovies()
