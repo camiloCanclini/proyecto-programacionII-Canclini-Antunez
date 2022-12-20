@@ -1,0 +1,29 @@
+/******************************************************/
+
+++URLS PARA CONSULTAR CON POSTMAN O NAVEGADOR++
+
+[rutadelservidor]/services/get_movies
+[rutadelservidor]/services/get_directors
+[rutadelservidor]/services/get_genres"
+[rutadelservidor]/services/get_movieByDirector?name=[nombredirector]
+[rutadelservidor]/services/get_moviesWithPoster
+
+/******************************************************/
+
+++USURIO PARA INGRESAR++
+
+nombre: admin
+contraseña: admin
+
+/******************************************************/
+
+/******************************************************/
+
+INICIAR LA APLICACION
+
+El siguiente comando se tiene que ejecutar desde 
+la carpeta "proyecto-programacionII-Canclini-Antunez"
+
+comando: flask --app run --debug run
+
+/******************************************************/
