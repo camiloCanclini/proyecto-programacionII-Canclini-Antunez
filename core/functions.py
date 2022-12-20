@@ -78,10 +78,6 @@ def editMovie(nombrePelicula):
 editMovie("Avatar")
 
 
-#def deleteMovie(nombrePelicula):
-
-
-
 def getGenres():
     with open ("database/peliculas.json") as json_file:
         file = json.load(json_file)
@@ -100,6 +96,7 @@ def getGenres():
         prejson = { 'Genres': list(genresInDB) }
         print(dict(prejson))
         return json.dumps(prejson)
+
 def getDirectors():
     with open ("database/peliculas.json") as json_file:
         file = json.load(json_file)
@@ -119,3 +116,38 @@ def getDirectors():
         prejson = { 'Directors': list(directorInDB) }
         print(dict(prejson))
         return json.dumps(prejson)
+
+
+def getMoviesPoster():
+    with open ("database/peliculas.json") as json_file:
+        file = json.load(json_file)
+        lista = []
+        for i in file["Movies"]: 
+            if i["Poster"] != "":
+                #print(i)
+                lista.append(i)
+        movieJson = {"Movies": lista}
+        #print(json.dumps(movieJson, indent=4))
+        return json.dumps(movieJson, indent=4)
+
+
+getMoviesPoster()
+
+
+def getMoviesByDirectors(directorSearched):
+    with open ("database/peliculas.json") as json_file:
+        file = json.load(json_file)
+        peliculasDirector = []
+        for i in file["Movies"]:
+            print(i)
+            print()
+            if i["Director"] == directorSearched:
+                peliculasDirector.append(i["Title"])
+                movJson = {"Movies": peliculasDirector}
+                print(json.dumps(movJson, indent=4))
+                
+        return peliculasDirector
+
+
+getMoviesByDirectors("James Cameron")
+

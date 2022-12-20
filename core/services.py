@@ -16,8 +16,10 @@ def response3():
 
 @app.route("/services/get_movieByDirector")
 def response4():
-    return getMovies()
+    return getMoviesByDirectors()
 
 @app.route("/services/get_movieWithPoster")
 def response5():
-    return getMovies()
+    return getMoviesPoster()
+
+
