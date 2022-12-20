@@ -18,7 +18,7 @@ def response3():
 @app.route("/services/get_movieByDirector", methods=['GET'])
 def response4():
     nameDirector = request.args('director')
-    return getMoviesByDirector()
+    return getMoviesByDirectors()
 
 @app.route("/services/get_movieWithPoster",methods=['GET'])
 def response5():
