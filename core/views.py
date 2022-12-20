@@ -30,9 +30,6 @@ def addMovies():
     else:
         return "<h1> A ocurrido un error </h1>"     
 
-@app.route("/user/upload_movie")
-def user2():
-    return render_template("user_menu_upload_movie.html")
 @app.route("/user/edit_movie", methods=['GET'])
 def renderEditMovie():
     parametros = request.args
@@ -47,4 +44,10 @@ def updateMovie():
     params = request.form
     print(params['Title'])
     editMovie(id, params['Title'], params['Plot'], params['Director'], params['Genre'], params['Year'],params['Poster'])
-    return render_template("users/movie_info.html")
+    return redirect(url_for('login'))
+
+@app.route("/user/delete_movie", methods=['GET'])
+def delMovie():
+    id=request.args["Id"]
+    deleteMovie(id)
+    return redirect(url_for('login'))

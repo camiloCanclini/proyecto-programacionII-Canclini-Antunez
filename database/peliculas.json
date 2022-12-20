@@ -14,26 +14,6 @@
                     "Comment": "Muy buena"
                 }
             ]
-        },
-        {
-            "Id": "tt1877830",
-            "Title": "The Batman",
-            "Plot": "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
-            "Director": "Matt Reeves",
-            "Genre": "Action, Crime, Drama",
-            "Year": "2022",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_SX300.jpg",
-            "Comments": []
-        },
-        {
-            "Id": "tt0948470",
-            "Title": "The Amazing Spider-Man",
-            "Plot": "After Peter Parker is bitten by a genetically altered spider, he gains newfound, spider-like powers and ventures out to save the city from the machinations of a mysterious reptilian foe.",
-            "Director": "Marc Webb",
-            "Genre": "Action, Adventure, Sci-Fi",
-            "Year": "2012",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BMjMyOTM4MDMxNV5BMl5BanBnXkFtZTcwNjIyNzExOA@@._V1_SX300.jpg",
-            "Comments": []
         }
     ]
 }

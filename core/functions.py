@@ -84,6 +84,22 @@ def editMovie(IdMovie, newTitle, newPlot, newDirector, newGenre, newYear, newPos
                 print(movie)
         with open ("database/peliculas.json", "w") as f:
             json.dump(dict, f, indent=4)
+            
+def deleteMovie(IdMovie):
+    print("El ID ES",IdMovie)
+    with open ("database/peliculas.json", "r") as f:
+        dict = json.load(f)
+        contVar = 0
+        for movie in dict['Movies']:
+            print(movie)
+            if movie['Id'] == IdMovie:
+                print("COINCIDENCIA")
+                del dict['Movies'][contVar]
+                print(movie)
+                break  
+            contVar = contVar + 1
+        with open ("database/peliculas.json", "w") as f:
+            json.dump(dict, f, indent=4)
 
 # editMovie("Avatar")
 
