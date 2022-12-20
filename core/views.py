@@ -6,6 +6,10 @@ from core.functions import *
 # R U T A S Y VISTAS
 #--------------------#
 
+#--------------------#
+#  P U B L I C A S
+#--------------------#
+
 #Ruta principal 
 
 @app.route("/")
@@ -19,7 +23,9 @@ def login():
     return render_template("public/login.html")
 @app.route("/user", methods=['POST'])
 
-#Ruta de usuario
+#--------------------#
+#  P R I V A D A S
+#--------------------#
 
 def user(): 
     parametros = request.form

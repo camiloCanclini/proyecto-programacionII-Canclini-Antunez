@@ -23,19 +23,8 @@ def getMovies():
     with open ("database/peliculas.json") as json_file:
         return json.load(json_file)
 
-#Obtiene el ID de las peliculas
-
-def getMovieInfoById(IdMovie):
-    with open ("database/peliculas.json", "r") as f:
-            dict = json.load(f)
-            for movie in dict['Movies']:
-                if movie['Id'] == IdMovie:
-                    #print(movie)
-                    return movie                 
-
-
 #----------------#
-#      A B M
+#     A B M
 #----------------#
 
 #Funcion de añadir peliculas al html ---> movie_info.html
@@ -80,6 +69,15 @@ def addMovie(id):
 
     return True
 
+#Obtiene la pelicula que posee el ID pasado como argumento
+
+def getMovieInfoById(IdMovie):
+    with open ("database/peliculas.json", "r") as f:
+            dict = json.load(f)
+            for movie in dict['Movies']:
+                if movie['Id'] == IdMovie:
+                    #print(movie)
+                    return movie  
 
 #Funcion de editar la informacion de las peliculas 
 
@@ -121,11 +119,9 @@ def deleteMovie(IdMovie):
             contVar = contVar + 1
         return False
         
-
-
-#-------------------------#
-#Funciones de los servicios (services.py)
-#-------------------------#
+#-------------------#
+# S E R V I C I O S #
+#-------------------#
 
 #Obtiene el genero de cada pelicula que fue agregada en la pagina
 
