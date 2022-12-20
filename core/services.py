@@ -1,4 +1,5 @@
 from core import app
+
 from flask import render_template, request
 from core.functions import *
 
@@ -14,10 +15,12 @@ def response2():
 def response3():
     return getGenres()
 
-@app.route("/services/get_movieByDirector")
+@app.route("/services/get_movieByDirector", methods=['GET'])
 def response4():
-    return getMovies()
+    nameDirector = request.args('director')
+    return getMoviesByDirector()
 
-@app.route("/services/get_movieWithPoster")
+@app.route("/services/get_movieWithPoster",methods=['GET'])
 def response5():
-    return getMovies()
+
+    return getMoviesPoster()
