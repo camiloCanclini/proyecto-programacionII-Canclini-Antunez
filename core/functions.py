@@ -92,14 +92,16 @@ def deleteMovie(IdMovie):
         contVar = 0
         for movie in dict['Movies']:
             print(movie)
-            if movie['Id'] == IdMovie:
+            if movie['Id'] == IdMovie and len(movie['Comments'])==0:
                 print("COINCIDENCIA")
                 del dict['Movies'][contVar]
                 print(movie)
-                break  
+                with open ("database/peliculas.json", "w") as f:
+                    json.dump(dict, f, indent=4)
+                    return True  
             contVar = contVar + 1
-        with open ("database/peliculas.json", "w") as f:
-            json.dump(dict, f, indent=4)
+        return False
+        
 
 # editMovie("Avatar")
 
@@ -121,7 +123,7 @@ def getGenres():
         print(genresInDB)
         prejson = { 'Genres': list(genresInDB) }
         print(dict(prejson))
-        return json.dumps(prejson)
+        return json.dumps(prejson, indent=4)
 
 def getDirectors():
     with open ("database/peliculas.json") as json_file:
@@ -141,7 +143,7 @@ def getDirectors():
         print(directorsInDB)
         prejson = { 'Directors': list(directorsInDB) }
         print(dict(prejson))
-        return json.dumps(prejson)
+        return json.dumps(prejson, indent=4)
 
 
 def getMoviesPoster():
@@ -157,7 +159,7 @@ def getMoviesPoster():
         return json.dumps(movieJson, indent=4)
 
 
-getMoviesPoster()
+#getMoviesPoster()
 
 
 def getMoviesByDirectors(directorSearched):
@@ -175,5 +177,5 @@ def getMoviesByDirectors(directorSearched):
         return peliculasDirector
 
 
-getMoviesByDirectors("James Cameron")
+#getMoviesByDirectors("James Cameron")
 

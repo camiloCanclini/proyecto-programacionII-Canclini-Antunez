@@ -49,5 +49,8 @@ def updateMovie():
 @app.route("/user/delete_movie", methods=['GET'])
 def delMovie():
     id=request.args["Id"]
-    deleteMovie(id)
-    return redirect(url_for('login'))
+    state = deleteMovie(id)
+    if state:
+        return redirect(url_for('login'))
+    else:
+        return "<h1>Usted no puede borrar peliculas con comentarios</h1>"

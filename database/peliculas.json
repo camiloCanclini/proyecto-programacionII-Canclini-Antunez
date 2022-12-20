@@ -1,5 +1,68 @@
 {
     "Movies": [
-        
+        {
+            "Id": "tt0075148",
+            "Title": "Rocky",
+            "Plot": "A small-time Philadelphia boxer gets a supremely rare chance to fight the world heavyweight champion in a bout in which he strives to go the distance for his self-respect.",
+            "Director": "John G. Avildsen",
+            "Genre": "Drama, Sport",
+            "Year": "1976",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BNTBkMjg2MjYtYTZjOS00ODQ0LTg0MDEtM2FiNmJmOGU1NGEwXkEyXkFqcGdeQXVyMjUzOTY1NTc@._V1_SX300.jpg",
+            "Comments": [
+                {
+                    "Username": "Pepito",
+                    "Comment": "Esta pelicula esta tremenda!"
+                },
+                {
+                    "Username": "JuanCoolGuy",
+                    "Comment": "No me gusto, actuaba un frances!"
+                },
+                {
+                    "Username": "JulietaGamer",
+                    "Comment": "Alta pelicula esta"
+                },
+                {
+                    "Username": "Mauro Profe",
+                    "Comment": "Esta muy bueno el proyecto chicos, los espero el a\u00f1o que viene en base de datos"
+                }
+            ]
+        },
+        {
+            "Id": "tt0360717",
+            "Title": "King Kongo",
+            "Plot": "A greedy film producer assembles a team of moviemakers and sets out for the infamous Skull Island, where they find more than just cannibalistic natives.",
+            "Director": "Peter Jackson",
+            "Genre": "Action, Adventure, Drama",
+            "Year": "2005",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BMjYxYmRlZWYtMzAwNC00MDA1LWJjNTItOTBjMzlhNGMzYzk3XkEyXkFqcGdeQXVyMTQxNzMzNDI@._V1_SX300.jpg",
+            "Comments": [
+                {
+                    "Username": "Pepito",
+                    "Comment": "Esta pelicula esta tremenda!"
+                },
+                {
+                    "Username": "JuanCoolGuy",
+                    "Comment": "No me gusto, actuaba un frances!"
+                },
+                {
+                    "Username": "JulietaGamer",
+                    "Comment": "Alta pelicula esta"
+                },
+                {
+                    "Username": "Mauro Profe",
+                    "Comment": "Esta muy bueno el proyecto chicos, los espero el a\u00f1o que viene en base de datos"
+                }
+            ]
+        },
+        {
+            "Id": "tt10872600",
+            "Title": "Spider-Man: No Way Home",
+            "Plot": "With Spider-Man's identity now revealed, Peter asks Doctor Strange for help. When a spell goes wrong, dangerous foes from other worlds start to appear, forcing Peter to discover what it truly means to be Spider-Man.",
+            "Director": "Jon Watts",
+            "Genre": "Action, Adventure, Fantasy",
+            "Year": "2021",
+            "Poster": "https://m.media-amazon.com/images/M/MV5BZWMyYzFjYTYtNTRjYi00OGExLWE2YzgtOGRmYjAxZTU3NzBiXkEyXkFqcGdeQXVyMzQ0MzA0NTM@._V1_SX300.jpg",
+            "Comments": []
+        }
     ]
 }
