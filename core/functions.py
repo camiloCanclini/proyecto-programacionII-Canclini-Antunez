@@ -17,6 +17,14 @@ def getMovies():
     with open ("database/peliculas.json") as json_file:
         return json.load(json_file)
     
+def getMovieInfoById(IdMovie):
+    with open ("database/peliculas.json", "r") as f:
+            dict = json.load(f)
+            for movie in dict['Movies']:
+                if movie['Id'] == IdMovie:
+                    #print(movie)
+                    return movie                 
+                
 def addMovie(id):
     url_handler = urllib.request.urlopen('http://www.omdbapi.com/?apikey=cf09fe5c&i=' + id)
 
@@ -32,7 +40,6 @@ def addMovie(id):
         director = data["Director"]
         año = data["Year"]
         genero = data["Genre"]
-        comments = {"Username":"", "Comment":""}
         poster = data["Poster"]
 
         d = dict()
@@ -43,7 +50,7 @@ def addMovie(id):
         d ["Genre"] = genero
         d ["Year"] = año
         d ["Poster"] = poster
-        d ["Comments"] = [comments]
+        d ["Comments"] = []
 
         def escribir_json(data, filename="database/peliculas.json"):
             with open (filename, "w") as f:
@@ -60,22 +67,41 @@ def addMovie(id):
     return True
 
 
-def editMovie(nombrePelicula):
+def editMovie(IdMovie, newTitle, newPlot, newDirector, newGenre, newYear, newPoster):
+    with open ("database/peliculas.json", "r") as f:
+        dict = json.load(f)
+        for movie in dict['Movies']:
+            print(movie)
+            if movie['Id'] == IdMovie:
+                print("COINCIDENCIA")
+                movie["Title"] = newTitle
+                movie ["Plot"] = newPlot
+                movie["Director"] = newDirector
+                movie ["Genre"] = newGenre
+                movie["Year"] = newYear
+                movie["Poster"] = newPoster
+                break                    
+                print(movie)
+        with open ("database/peliculas.json", "w") as f:
+            json.dump(dict, f, indent=4)
+            
+def deleteMovie(IdMovie):
+    print("El ID ES",IdMovie)
+    with open ("database/peliculas.json", "r") as f:
+        dict = json.load(f)
+        contVar = 0
+        for movie in dict['Movies']:
+            print(movie)
+            if movie['Id'] == IdMovie:
+                print("COINCIDENCIA")
+                del dict['Movies'][contVar]
+                print(movie)
+                break  
+            contVar = contVar + 1
+        with open ("database/peliculas.json", "w") as f:
+            json.dump(dict, f, indent=4)
 
-        with open ("database/peliculas.json", "r") as f:
-            dict = json.load(f)
-
-            for info in dict['Movies']:
-                if info['Title'] == nombrePelicula:
-                    info["Title"] = "Mono Azul"
-                    info ["Plot"] = "La pelicula del tipo que no tenia piernas y ahora es un mono azul...con piernas, epico"
-                    info["Director"] = "Enano Bostero"
-                    info ["Genre"] = "Infantil"
-                    info["Year"] = "2022 vamo messi"
-                    
-                    print(info)
-
-editMovie("Avatar")
+# editMovie("Avatar")
 
 
 def getGenres():
@@ -100,7 +126,7 @@ def getGenres():
 def getDirectors():
     with open ("database/peliculas.json") as json_file:
         file = json.load(json_file)
-        directorInDB = set()
+        directorsInDB = set()
         print(file)
         for i in file["Movies"]:
             print(i["Director"])
@@ -108,12 +134,12 @@ def getDirectors():
             if "," in director:
                 genres = director.split(",")
                 for i in genres:
-                    directorInDB.add(i)
+                    directorsInDB.add(i)
                 continue
-            if director not in directorInDB:
-                directorInDB.add(director)
-        print(directorInDB)
-        prejson = { 'Directors': list(directorInDB) }
+            if director not in directorsInDB:
+                directorsInDB.add(director)
+        print(directorsInDB)
+        prejson = { 'Directors': list(directorsInDB) }
         print(dict(prejson))
         return json.dumps(prejson)
 

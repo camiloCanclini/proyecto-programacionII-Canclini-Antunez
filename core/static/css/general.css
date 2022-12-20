@@ -211,6 +211,14 @@ main {
     align-items: center;
     margin-bottom: 20px;
     overflow: auto;
+    color: #fff;
+    font-size: 3rem;
+    font-family: monospace;
+}
+.no-comments{
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 .comment {
     font-family: monospace;

@@ -1,44 +1,5 @@
 {
     "Movies": [
-        {
-            "Id": "tt0499549",
-            "Title": "Avatar",
-            "Plot": "A paraplegic Marine dispatched to the moon Pandora on a unique mission becomes torn between following his orders and protecting the world he feels is his home.",
-            "Director": "James Cameron",
-            "Genre": "Action, Adventure, Fantasy",
-            "Year": "2009",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BNjA3NGExZDktNDlhZC00NjYyLTgwNmUtZWUzMDYwMTZjZWUyXkEyXkFqcGdeQXVyMTU1MDM3NDk0._V1_SX300.jpg",
-            "Comments": [
-                {
-                    "username": "Joaqo123",
-                    "comment": "Muy buena"
-                }
-            ]
-        },
-        {
-            "Id": "tt1877830",
-            "Title": "The Batman",
-            "Plot": "When a sadistic serial killer begins murdering key political figures in Gotham, Batman is forced to investigate the city's hidden corruption and question his family's involvement.",
-            "Director": "Matt Reeves",
-            "Genre": "Action, Crime, Drama",
-            "Year": "2022",
-            "Poster": "https://m.media-amazon.com/images/M/MV5BMDdmMTBiNTYtMDIzNi00NGVlLWIzMDYtZTk3MTQ3NGQxZGEwXkEyXkFqcGdeQXVyMzMwOTU5MDk@._V1_SX300.jpg",
-            "Comments": []
-        },
-        {
-            "Id": "tt0120338",
-            "Title": "Titanic",
-            "Plot": "A seventeen-year-old aristocrat falls in love with a kind but poor artist aboard the luxurious, ill-fated R.M.S. Titanic.",
-            "Director": "James Cameron",
-            "Genre": "Drama, Romance",
-            "Year": "1997",
-            "Poster": "",
-            "Comments": [
-                {
-                    "Username": "",
-                    "Comment": ""
-                }
-            ]
-        }
+        
     ]
 }

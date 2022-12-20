@@ -1,5 +1,5 @@
 from core import app
-from flask import render_template, request
+from flask import render_template, request,redirect,url_for
 from core.functions import *
 
 @app.route("/")
@@ -26,10 +26,28 @@ def addMovies():
     
     url= addMovie(parametros["id"]) 
     if url == True:
-        return render_template('users/movie_info.html')
+        return redirect(url_for('login'))
     else:
         return "<h1> A ocurrido un error </h1>"     
 
-@app.route("/user/upload_movie")
-def user2():
-    return render_template("user_menu_upload_movie.html")
+@app.route("/user/edit_movie", methods=['GET'])
+def renderEditMovie():
+    parametros = request.args
+    print (parametros)
+    Id = parametros["Id"]
+    infoMovie = getMovieInfoById(Id)
+    return render_template("users/edit_movie.html", infoMovie=infoMovie)
+
+@app.route("/user/update_movie", methods=['POST','GET'])
+def updateMovie():
+    id=request.args["Id"]
+    params = request.form
+    print(params['Title'])
+    editMovie(id, params['Title'], params['Plot'], params['Director'], params['Genre'], params['Year'],params['Poster'])
+    return redirect(url_for('login'))
+
+@app.route("/user/delete_movie", methods=['GET'])
+def delMovie():
+    id=request.args["Id"]
+    deleteMovie(id)
+    return redirect(url_for('login'))

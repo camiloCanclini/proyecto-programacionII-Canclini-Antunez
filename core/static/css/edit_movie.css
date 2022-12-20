@@ -1,0 +1,64 @@
+main{
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    padding: 2rem;
+}
+form{
+    background-color: rgb(11, 11, 11);
+    display: flex;
+    flex-direction: column;
+    border-radius: 1rem;
+    padding: 1rem;
+    width: 80vh;
+    max-height: 80vh;
+}
+form > div{
+    display: flex;
+    align-content: center;
+    min-height: 2rem;
+    margin: .3rem;
+}
+form > div > label {
+    color: #FFF;
+    min-width: 100px;
+    flex-basis: 0;
+    flex-grow: 1;
+    display: flex;
+    align-items: center;
+    font-family: monospace;
+    font-size: 1rem;
+}  
+form > div > input, form > div > textarea {
+    border: none;
+    border-radius: .4rem;
+    flex-basis: 0;
+    min-width: 400px;
+    min-height: 40px;
+    flex-grow: 5;
+    font-size: 1rem;
+    font-family: monospace;
+    padding: 0 1rem;
+}
+form > div > textarea{
+    padding: .3rem 1rem;
+    height: 100px;
+    max-height: 200px;
+    display: flex;
+    align-items: start;
+}
+form > input[type="submit"]{
+    border: none;
+    border-radius: 1rem;
+    height: 50px;
+    box-shadow: inset 0px 0px 15px 3px #20509e;
+    background: linear-gradient(to bottom, #4b82db 5%, #6b92e0 100%);
+    background-color: #4b82db;
+    color: #ffffff;
+    cursor: pointer;
+}
+form > input[type="submit"]:hover{
+    background: linear-gradient(to bottom, #6b92e0 5%, #4b82db 100%);
+    background-color: #6b92e0;
+}    
